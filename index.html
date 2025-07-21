@@ -19,25 +19,10 @@
       padding: 2rem 1rem;
       text-align: center;
     }
-    header h1 {
-      margin: 0;
-      font-size: 3rem;
-    }
-    .brand-logo {
-      display: flex;
-      justify-content: center;
-      align-items: baseline;
-      gap: 0.5rem;
-    }
-    .brand-logo .dried {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
-      color: #795548;
-    }
-    .brand-logo .rite {
-      font-family: 'Raleway', sans-serif;
-      font-size: 2.8rem;
-      color: #3e2723;
+    header img.logo {
+      max-width: 250px;
+      height: auto;
+      margin-bottom: 1rem;
     }
     nav {
       display: flex;
@@ -53,18 +38,31 @@
     }
     section {
       padding: 2rem;
-      max-width: 800px;
+      max-width: 1000px;
       margin: auto;
     }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 2rem;
+      padding: 1rem 0;
+    }
+    .carousel::-webkit-scrollbar {
+      height: 8px;
+    }
+    .carousel::-webkit-scrollbar-thumb {
+      background-color: #ccc;
+      border-radius: 10px;
+    }
     .product {
+      min-width: 300px;
+      flex: 0 0 auto;
+      scroll-snap-align: center;
       background-color: #ffffff;
       padding: 2rem;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      margin-top: 1rem;
-    }
-    .product h2 {
-      color: #da7b00;
     }
     .product img {
       max-width: 100%;
@@ -81,10 +79,7 @@
 </head>
 <body>
   <header>
-    <div class="brand-logo">
-      <span class="dried">Dried</span>
-      <span class="rite">Rite</span>
-    </div>
+    <img src="dried rite final.png" alt="Dried Rite Logo" class="logo">
     <p>From fresh to dried — capturing nature's best in every steep.</p>
   </header>
   <nav>
@@ -100,38 +95,45 @@
   <section id="products">
     <h2>Our Product: Steep and Sip</h2>
     <div class="product">
-      <h3>Tropical Burst</h3>
-      <p><strong>Ingredients:</strong> Orange slices, pineapple bits, passion fruit chips, hibiscus petals</p>
-      <p><strong>Flavor Profile:</strong> Fruity, tangy, tropical, and aromatic — sunshine in every sip!</p>
-      <img src="tropical-burst.jpeg" alt="Tropical Burst Jar">
+      <h3>Jar Display</h3>
+      <p><strong>Packaging Preview:</strong> Here’s what your Steep and Sip blend looks like in our signature jar.</p>
+      <img src="dried_rite_jar.png" alt="Dried Rite Jar">
+      <h4>How to Use</h4>
+      <p>1. Open the jar and add 1–2 teaspoons of your favorite blend into a cup.<br>
+         2. Pour hot water (not boiling) over it.<br>
+         3. Let steep for 5–7 minutes.<br>
+         4. Stir and enjoy your all-natural fruit tea.<br>
+         Optional: Add honey or lemon for taste.</p>
     </div>
   </section>
   <section id="flavors">
     <h2>Explore Our Flavors</h2>
-    <div class="product">
-      <h3>Citrus Glow</h3>
-      <p><strong>Ingredients:</strong> Orange slices, lemon slices, dried ginger, hibiscus petals</p>
-      <p><strong>Flavor Profile:</strong> Tangy and revitalizing with an immune-boosting kick</p>
-      <img src="citrus-glow.jpeg" alt="Citrus Glow Jar">
-    </div>
-    <div class="product">
-      <h3>Spiced Ember</h3>
-      <p><strong>Ingredients:</strong> Orange slices, cloves, cinnamon stick shards, cardamom</p>
-      <p><strong>Flavor Profile:</strong> Warm, comforting, and subtly spiced — like a cozy hug in a cup</p>
-      <img src="spiced-ember.jpeg" alt="Spiced Ember Jar">
-    </div>
-    <div class="product">
-      <h3>Tropical Burst</h3>
-      <p><strong>Ingredients:</strong> Orange slices, pineapple slices, passion fruit bits</p>
-      <p><strong>Flavor Profile:</strong> Juicy, vibrant, and fun — your island escape in every brew</p>
-      <img src="tropical-burst.jpeg" alt="Tropical Burst Jar Repeat">
+    <div class="carousel">
+      <div class="product">
+        <h3>Citrus Glow</h3>
+        <p><strong>Ingredients:</strong> Orange slices, lemon slices, dried ginger, hibiscus petals</p>
+        <p><strong>Flavor Profile:</strong> Tangy and revitalizing with an immune-boosting kick</p>
+        <img src="citrus-glow.jpeg" alt="Citrus Glow Jar">
+      </div>
+      <div class="product">
+        <h3>Spiced Ember</h3>
+        <p><strong>Ingredients:</strong> Orange slices, cloves, cinnamon stick shards, cardamom</p>
+        <p><strong>Flavor Profile:</strong> Warm, comforting, and subtly spiced — like a cozy hug in a cup</p>
+        <img src="spiced-ember.jpeg" alt="Spiced Ember Jar">
+      </div>
+      <div class="product">
+        <h3>Tropical Burst</h3>
+        <p><strong>Ingredients:</strong> Orange slices, pineapple slices, passion fruit bits</p>
+        <p><strong>Flavor Profile:</strong> Juicy, vibrant, and fun — your island escape in every brew</p>
+        <img src="tropical-burst.jpeg" alt="Tropical Burst Jar">
+      </div>
     </div>
   </section>
   <section id="contact">
     <h2>Contact Us</h2>
     <p>Email: hello@driedrite.com<br>
-    Instagram: @driedrite<br>
-    Phone: +91 99999 88888</p>
+    Instagram: <a href="https://instagram.com/dried_rite" target="_blank">@dried_rite</a><br>
+    Phone: +91 7902687860</p>
   </section>
   <footer>
     <p>&copy; 2025 Dried Rite. All rights reserved.</p>
